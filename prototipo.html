@@ -1,35 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rueda Nocturna</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototipo | Rueda Nocturna</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ruta: '#1E7A4F',
+            pedal: '#F39A2B',
+            noche: '#14213D',
+            crema: '#FAF6EF',
+            asfalto: '#5B6470',
+            farol: '#FFD166',
+          },
+          fontFamily: {
+            titulos: ['Montserrat', 'Arial', 'sans-serif'],
+            texto: ['"Open Sans"', 'Helvetica', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
 </head>
+<body class="min-h-screen bg-crema font-texto text-noche">
 
-<body>
-<header class="bg-green-600 m-3 rounded-lg w-fit mx-auto p-4">
-<p>"Nuevo · Jueves a sábado"</p>
-</header>
-<main>
-    <article class=" m-4 p-4 rounded-lg  ">
-    <h1 class=" text-center">"Rueda Nocturna"</h1>
-    <h2 class=" text-center">"Descubre Medellín en bici cuando se encienden las luces"</h2>
-    <div class="flex  justify-center">
-        <section class="bg-green-200 p-4 w-80 m-2">
-            <p><strong>3 rutas</strong></p>
-        </section>
-        <section class="bg-blue-200 p-4 w-80 m-2 rounded-lg">
-            <p><strong>Desde $55.000</strong></p>
-        </section>
-    </div>
-    </article>
-    <button class="bg-green-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4">
-        <a href="https://v3.tailwindcss.com/docs/installation/play-cdn" target="_blank">Reservar</a>
-    </button>
-</main>
+  <main class="mx-auto max-w-3xl p-6">
+    <section class="space-y-6 rounded-2xl bg-noche p-8 text-crema">
+
+      <p class="inline-block rounded-full bg-farol px-4 py-1 text-sm font-semibold uppercase tracking-wider text-noche">
+        Nuevo · Jueves a sábado
+      </p>
+
+      <h1 class="font-titulos text-5xl font-extrabold leading-tight tracking-tight">
+        Rueda Nocturna
+      </h1>
+
+      <p class="max-w-xl text-lg leading-relaxed text-crema/80">
+        Descubre Medellín en bici cuando se encienden las luces
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <div class="w-40 rounded-xl border border-crema/20 p-4">
+          <p class="font-titulos text-3xl font-bold text-farol">3 rutas</p>
+        </div>
+        <div class="w-48 rounded-xl border border-crema/20 p-4">
+          <p class="font-titulos text-3xl font-bold text-farol">Desde $55.000</p>
+        </div>
+      </div>
+
+      <a href="../rueda-libre/paginas/reservas.html"
+         class="inline-block rounded-lg bg-pedal px-6 py-3 font-semibold uppercase tracking-wide text-noche hover:bg-farol">
+        Inscríbete
+      </a>
+
+    </section>
+  </main>
+
 </body>
-
 </html>

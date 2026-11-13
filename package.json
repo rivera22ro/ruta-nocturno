@@ -1,0 +1,25 @@
+{
+  "name": "ruta-nocturno",
+  "version": "1.0.0",
+  "description": "Landing de la campaña de rutas nocturnas en bici por Medellín, creada para Rueda Libre.",
+  "main": "tailwind.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rivera22ro/ruta-nocturno.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rivera22ro/ruta-nocturno/issues"
+  },
+  "homepage": "https://github.com/rivera22ro/ruta-nocturno#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "tailwindcss": "^4.3.5"
+  }
+}

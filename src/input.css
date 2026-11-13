@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+@theme {
+  --color-ruta: #1E7A4F;
+  --color-pedal: #F39A2B;
+  --color-noche: #14213D;
+  --color-crema: #FAF6EF;
+  --color-asfalto: #5B6470;
+  --color-farol: #FFD166;
+
+  --font-titulos: "Montserrat", Arial, sans-serif;
+  --font-texto: "Open Sans", Helvetica, sans-serif;
+}
+
+@layer components {
+  .btn-principal {
+    @apply inline-flex items-center justify-center rounded-lg bg-ruta px-6 py-3 font-semibold text-white transition hover:bg-noche focus:outline-none focus-visible:ring-4 focus-visible:ring-farol focus-visible:ring-offset-2 focus-visible:ring-offset-crema dark:hover:bg-farol dark:hover:text-noche;
+  }
+  .btn-secundario {
+    @apply inline-flex items-center justify-center rounded-lg bg-pedal px-6 py-3 font-semibold text-noche transition hover:bg-farol focus:outline-none focus-visible:ring-4 focus-visible:ring-noche;
+  }
+  .btn-contorno {
+    @apply inline-flex items-center justify-center rounded-lg border-2 border-noche px-6 py-3 font-semibold text-noche transition hover:bg-noche hover:text-crema focus:outline-none focus-visible:ring-4 focus-visible:ring-farol;
+  }
+}

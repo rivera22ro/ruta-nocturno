@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Componentes | Rueda Nocturna</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./src/output.css">
+</head>
+<body class="min-h-screen bg-crema font-texto text-noche antialiased dark:bg-noche dark:text-crema">
+  <main class="mx-auto max-w-4xl space-y-16 px-4 py-12 sm:px-6 lg:px-8">
+
+    <header class="space-y-2">
+      <h1 class="font-titulos text-4xl font-extrabold">Kit de componentes · Rueda Nocturna v0.1</h1>
+      <p class="text-asfalto dark:text-crema/80">Botón, card, alerta e input. Todos usan las mismas reglas del kit.</p>
+    </header>
+
+    <!-- BOTONES -->
+    <section aria-labelledby="t-botones" class="space-y-6">
+      <h2 id="t-botones" class="font-titulos text-2xl font-bold">Botones</h2>
+      <div class="flex flex-wrap items-center gap-4">
+        <button type="button" class="btn-principal">Principal</button>
+        <button type="button" class="btn-secundario">Secundario</button>
+        <button type="button" class="btn-contorno">De contorno</button>
+      </div>
+    </section>
+
+    <!-- CARD -->
+    <section aria-labelledby="t-card" class="space-y-6">
+      <h2 id="t-card" class="font-titulos text-2xl font-bold">Card</h2>
+      <article class="flex max-w-sm flex-col overflow-hidden rounded-2xl border border-asfalto/20 bg-white shadow-md transition hover:border-ruta hover:shadow-2xl dark:border-crema/15 dark:bg-noche/60 dark:hover:border-farol">
+        <img src="./img/centro.jpeg" alt="Ruta Luces del Centro de noche" class="h-48 w-full object-cover">
+        <div class="flex flex-1 flex-col gap-4 p-6">
+          <span class="w-fit rounded-full bg-ruta px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Nivel fácil</span>
+          <h3 class="font-titulos text-xl font-bold">Luces del Centro</h3>
+          <dl class="grid grid-cols-3 gap-2 text-center">
+            <div><dt class="text-xs uppercase tracking-wide text-asfalto dark:text-crema/70">Distancia</dt><dd class="font-bold">10 km</dd></div>
+            <div><dt class="text-xs uppercase tracking-wide text-asfalto dark:text-crema/70">Duración</dt><dd class="font-bold">2 h</dd></div>
+            <div><dt class="text-xs uppercase tracking-wide text-asfalto dark:text-crema/70">Encuentro</dt><dd class="font-bold">Rueda Libre</dd></div>
+          </dl>
+          <p class="mt-auto font-titulos text-2xl font-extrabold text-ruta dark:text-farol">$55.000</p>
+          <button type="button" class="btn-principal">Inscribirme</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- ALERTAS -->
+    <section aria-labelledby="t-alertas" class="space-y-4">
+      <h2 id="t-alertas" class="font-titulos text-2xl font-bold">Alertas</h2>
+
+      <div class="rounded-r-lg border-l-4 border-noche bg-noche/5 p-4 dark:border-crema dark:bg-crema/5">
+        <p class="font-titulos font-bold">Información</p>
+        <p class="text-sm">Las salidas inician a las 6:30 p. m. desde la sede de Rueda Libre.</p>
+      </div>
+
+      <div role="status" class="rounded-r-lg border-l-4 border-ruta bg-ruta/10 p-4 dark:bg-ruta/25">
+        <p class="font-titulos font-bold"><span class="sr-only">Aviso de éxito: </span>Inscripción recibida</p>
+        <p class="text-sm">Te enviaremos la confirmación a tu correo.</p>
+      </div>
+
+      <div role="alert" class="rounded-r-lg border-l-4 border-pedal bg-pedal/15 p-4">
+        <p class="font-titulos font-bold">Advertencia</p>
+        <p class="text-sm">Quedan pocos cupos para la ruta Luna en Las Palmas.</p>
+      </div>
+    </section>
+
+    <!-- INPUTS -->
+    <section aria-labelledby="t-inputs" class="space-y-6">
+      <h2 id="t-inputs" class="font-titulos text-2xl font-bold">Campos</h2>
+
+      <div class="flex flex-col gap-2">
+        <label for="kit-correo" class="font-semibold">Correo</label>
+        <input id="kit-correo" type="email" placeholder="tucorreo@ejemplo.com" aria-describedby="kit-correo-ayuda"
+               class="max-w-md rounded-lg border border-asfalto bg-white px-4 py-3 text-noche placeholder:text-asfalto focus:outline-none focus:ring-4 focus:ring-farol">
+        <p id="kit-correo-ayuda" class="text-sm text-asfalto dark:text-crema/80">Usaremos este correo para confirmar tu inscripción.</p>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label for="kit-celular" class="font-semibold">Celular</label>
+        <input id="kit-celular" type="tel" placeholder="3001234567" aria-describedby="kit-celular-ayuda"
+               class="max-w-md rounded-lg border border-asfalto bg-white px-4 py-3 text-noche placeholder:text-asfalto focus:outline-none focus:ring-4 focus:ring-farol">
+        <p id="kit-celular-ayuda" class="text-sm text-asfalto dark:text-crema/80">10 dígitos, empieza por 3.</p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
